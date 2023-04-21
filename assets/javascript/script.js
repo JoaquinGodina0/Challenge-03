@@ -88,10 +88,13 @@ function generatePassword(){
         optionsIncluded = specialCharacter;
     };
     
+    //string that's empty in order to have randomly generated characters get added into it
     let generatedPassword = ' ';
+    //for loop making the amount of characters desired and generates however many character were desired
     for (var i = 0; i < passwordLength; i++){
     generatedPassword += optionsIncluded[Math.floor(Math.random()*optionsIncluded.length)];
     }
+    //makes empty string(now with characters) equal the password in order for it to be displayed and returns the value
     password = generatedPassword;
     return password;
 }
