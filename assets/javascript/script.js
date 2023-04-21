@@ -49,9 +49,9 @@ function generatePassword(){
         optionsIncluded = arrayCombined.concat(numbers, upperCaseLetters, letters);
     }
     else if(numbersIncluded && specialsIncluded && lowerCaseIncluded){
-        optionsIncluded = arrayCombined.concat(numbers, specialsIncluded, letters);
+        optionsIncluded = arrayCombined.concat(numbers, specialCharacter, letters);
     }
-    else if(numbersIncluded && upperCaseIncluded && lowerCaseIncluded){
+    else if(numbersIncluded && upperCaseIncluded && specialsIncluded){
         optionsIncluded = arrayCombined.concat(numbers, upperCaseLetters, specialsIncluded);
     }
     else if(numbersIncluded && upperCaseIncluded){
@@ -73,7 +73,7 @@ function generatePassword(){
         optionsIncluded = arrayCombined.concat(upperCaseLetters, specialCharacter);
     }
     else if(lowerCaseIncluded && specialsIncluded ){
-        optionsIncluded = arrayCombined.concat(upperCaseLetters, letters);
+        optionsIncluded = arrayCombined.concat(specialCharacter, letters);
     }
     else if(lowerCaseIncluded){
         optionsIncluded = letters;
